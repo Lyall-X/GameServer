@@ -1,7 +1,7 @@
 # 游戏服务器框架
 
 c++游戏服务器框架，上层绑定lua，功能分离，可复用性高，支持数据缓存，读写速度快   
-![error](https://WKnvNs4Ypi8/s400/IMG_0012.jpg)
+![error](https://github.com/LiuyueOvO/GameServer/blob/master/Img/GameDemo.gif)
 
 ## 环境部署
 
