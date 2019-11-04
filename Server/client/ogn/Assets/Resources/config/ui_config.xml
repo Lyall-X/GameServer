@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <view name="ui_login" path="prefab/ui_login" script="ViewLoginUI" />
+  <view name="ui_main" path="prefab/ui_main" script="ViewMainUI" />
+  <view name="ui_game" path="prefab/ui_game" script="ViewRoomUI" />
+</root>
+  
