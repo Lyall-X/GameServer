@@ -1,0 +1,36 @@
+{
+  "config": [
+	{
+      "Name": "Gate",
+      "Host": "112.74.49.74",
+      "Port": 13380
+    },
+
+    {
+      "Name": "World",
+      "Host": "127.0.0.1",
+      "Port": 13390
+    },
+
+    {
+      "Name": "DB",
+      "Host": "127.0.0.1",
+      "Port": 13400
+    },
+
+    {
+      "Name": "Mysql",
+      "Host": "127.0.0.1",
+      "Port": 3306,
+      "User": "root",
+      "Password": "1019681984",
+      "DbName": "game"
+    },
+
+    {
+      "Name": "OGN",
+      "Host": "112.74.49.74",
+      "Port": 13380
+    }
+  ]
+}

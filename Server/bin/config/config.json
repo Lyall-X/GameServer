@@ -1,0 +1,53 @@
+{
+	"config": [
+		{
+			"ID": 1,
+			"Name": "Gate",
+			"Host": "112.74.49.74",
+			"Port": 13380,
+			"User": "",
+			"Password": "",
+			"DbName": ""
+		}, {
+			"ID": 2,
+			"Name": "World",
+			"Host": "127.0.0.1",
+			"Port": 13390,
+			"User": "",
+			"Password": "",
+			"DbName": ""
+		}, {
+			"ID": 3,
+			"Name": "DB",
+			"Host": "127.0.0.1",
+			"Port": 13400,
+			"User": "",
+			"Password": "",
+			"DbName": ""
+		}, {
+			"ID": 4,
+			"Name": "OGN",
+			"Host": "127.0.0.1",
+			"Port": 13380,
+			"User": "",
+			"Password": "",
+			"DbName": ""
+		}, {
+			"ID": 5,
+			"Name": "Mysql",
+			"Host": "127.0.0.1",
+			"Port": 3306,
+			"User": "root",
+			"Password": "1019681984",
+			"DbName": "ogn"
+		}, {
+			"ID": 6,
+			"Name": "Redis",
+			"Host": "127.0.0.1",
+			"Port": 6378,
+			"User": "",
+			"Password": "root123456",
+			"DbName": ""
+		}
+	]
+}
