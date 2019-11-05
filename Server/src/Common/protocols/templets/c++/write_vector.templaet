@@ -1,0 +1,5 @@
+uint32 #NAME#_Size = (uint32)#NAME#.size();
+CHECK(bytes << #NAME#_Size);
+for (uint32 #NAME#_i = 0; #NAME#_i < #NAME#_Size; ++#NAME#_i) {
+	CHECK(bytes << #NAME#[#NAME#_i]);
+}

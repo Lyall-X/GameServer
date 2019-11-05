@@ -1,0 +1,7 @@
+uint32 #NAME#_Size = 0;
+CHECK(bytes >> #NAME#_Size);
+for (uint32 #NAME#_i = 0; #NAME#_i < #NAME#_Size; ++#NAME#_i) {
+	#ELEMENT# #NAME#_info;
+	CHECK(bytes >> #NAME#_info);
+	#NAME#.push_back(#NAME#_info);
+}

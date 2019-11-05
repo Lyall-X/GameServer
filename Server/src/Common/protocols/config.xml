@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item file="protocols.xml">
+  <class>
+    <member type="int8"/>
+    <member type="uint8"/>
+    <member type="int16"/>
+    <member type="uint16"/>
+    <member type="int32"/>
+    <member type="uint32"/>
+    <member type="int64"/>
+    <member type="uint64"/>
+    <member type="float32"/>
+    <member type="float64"/>
+    <member type="string"/>
+  </class>
+
+  <language>
+    <item type ="c" path="c++/" declare="#TYPE# #NAME#;" file="protocols.h" register="REGISTER_PACKET_HELPER(#PACKET_ID#, #CLASS_NAME#);">
+      <templet name="struct_header.templaet" />
+      <templet name="class_header.templaet" />
+      <templet name="class_header_import.templaet" />
+      <templet name="read_vector.templaet" />
+      <templet name="write_vector.templaet" />
+      
+      <member type="int8" replace="int8" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="uint8" replace="uint8" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="int16" replace="int16" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="uint16" replace="uint16" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="int32" replace="int32" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="uint32" replace="uint32" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="int64" replace="int64" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="uint64" replace="uint64" default="#NAME# = 0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="float32" replace="float32" default="#NAME# = 0.f;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="float64" replace="float64" default="#NAME# = 0.0;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="string" replace="std::string" default='#NAME# = "";' read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="vector" replace="std::vector[#ELEMENT#]" default="" read="read_vector.templaet" write="write_vector.templaet"/>
+      <member type="Object" replace="#TYPE#" default="#NAME#;" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+      <member type="Stream" replace="BinaryStream" default="" read="CHECK(bytes ]] #NAME#);" write="CHECK(bytes [[ #NAME#);"/>
+    </item>
+    <item type ="c#" path="csharp/" declare="public #TYPE# #NAME#;" file="protocols.cs" register='PacketHelper.instance.RegisterPacket((int)PACKET_ID_ENUM.#PACKET_ID#, "#CLASS_NAME#");'>
+      <templet name="struct_header.templaet" />
+      <templet name="class_header.templaet" />
+      <templet name="class_header_import.templaet" />
+      <templet name="read_vector.templaet" />
+      <templet name="write_vector.templaet" />
+      
+      <member type="int8" replace="byte" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint8" replace="sbyte" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int16" replace="short" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint16" replace="ushort" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int32" replace="int" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint32" replace="uint" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int64" replace="long" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint64" replace="ulong" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="float32" replace="float" default="#NAME# = 0.0F;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="float64" replace="double" default="#NAME# = 0.0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="string" replace="string" default='#NAME# = "";' read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="vector" replace="List[#ELEMENT#]" default="#NAME# = new List[#ELEMENT#]();" read="read_vector.templaet" write="write_vector.templaet"/>
+      <member type="Object" replace="#TYPE#" default="#NAME# = new #TYPE#();" read="bytes.Read(#NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="Stream" replace="BinaryStream" default="#NAME# = new BinaryStream();" read="bytes.Read(#NAME#);" write="bytes.Write(#NAME#);"/>
+    </item>
+
+      <!--<item type ="ts" path="ts/" declare="public var:#NAME# #TYPE#;" file="protocols.ts" register='PacketHelper.instance.RegisterPacket((int)PACKET_ID_ENUM.#PACKET_ID#, "#CLASS_NAME#");'>
+      <templet name="struct_header.templaet" />
+      <templet name="class_header.templaet" />
+      <templet name="class_header_import.templaet" />
+      <templet name="read_vector.templaet" />
+      <templet name="write_vector.templaet" />
+      
+      <member type="int8" replace="byte" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint8" replace="sbyte" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int16" replace="short" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint16" replace="ushort" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int32" replace="int" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint32" replace="uint" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="int64" replace="long" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="uint64" replace="ulong" default="#NAME# = 0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="float32" replace="float" default="#NAME# = 0.0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="float64" replace="double" default="#NAME# = 0.0;" read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="string" replace="string" default='#NAME# = "";' read="bytes.Read(ref #NAME#);" write="bytes.Write(#NAME#);"/>
+      <member type="vector" replace="List[#ELEMENT#]" default="#NAME# = new List[#ELEMENT#]();" read="read_vector.templaet" write="write_vector.templaet"/>
+      <member type="Object" replace="#TYPE#" default="#NAME# = new #TYPE#();" read="bytes.Read(#NAME#);" write="bytes.Write(#NAME#);"/>
+    </item>-->
+  </language>
+  
+  <!--<class>
+    <member type="char" read="readByte" write="writeByte" ts="number"/>
+    <member type="short" read="readShort" write="writeShort"  ts="number"/>
+    <member type="int" read="readInt" write="writeInt" ts="number"/>
+    <member type="__int64" read="readInt64" write="writeInt64"  ts="number"/>
+    <member type="unsigned char" read="readUnsignedByte" write="writeUnsignedByte" ts="number" />
+    <member type="unsigned short" read="readUnsignedShort" write="writeUnsignedShort" ts="number" />
+    <member type="unsigned int" read="readUnsignedInt" write="writeUnsignedInt" ts="number"/>
+    <member type="unsigned __int64" read="readUnsignedInt64" write="writeUnsignedInt64" ts="number" />
+    <member type="string" read="readUTF" write="writeUTF"  ts="string" />
+  </class>-->
+</item>
+  

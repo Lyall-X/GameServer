@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+enum PACKET_ID_ENUM
+{
+#PACKET_ID_ENUM#
+}
+
+class PacketRegister
+{
+    public PacketRegister()
+    {
+#REGISTER#
+    }
+}
+
+#PROTOCOLS#

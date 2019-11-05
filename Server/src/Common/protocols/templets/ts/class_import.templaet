@@ -1,0 +1,14 @@
+import {IPacket} from './IPacket';
+import {IStream} from './IPacket';
+import {ByteStream} from './ByteStream';
+import {PacketDispatch} from './PacketDispatch';
+
+export enum PACKET_ID_ENUM
+{
+#PACKET_ID_ENUM#
+}
+
+export function doRegisterPacket(packetDispatch:PacketDispatch) {
+#PACKET_REGISTER#
+}
+

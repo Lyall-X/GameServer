@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<item>
+  <class>
+    
+    <element name="DBAccountInfo" parent="object">
+      <member type="uint32" name="id" />
+      <member type="string" name="user" />
+      <member type="Stream" name="password" />
+      <member type="string" name="name" />
+      <member type="string" name="email" />
+      <member type="string" name="phone" />
+    </element>
+    
+    <element name="DBRoleInfo" parent="object">
+      <member type="uint32" name="id" />
+      <member type="uint32" name="accountId" />
+      <member type="string" name="name" />
+      <member type="uint32" name="createTime" />
+      <member type="uint32" name="onlinetotaltime" />
+      <member type="Stream" name="datas" />
+      <member type="string" name="datastr" />
+    </element>
+
+    <element name="Point" parent="object">
+      <member type="int32" name="x" />
+      <member type="int32" name="y" />
+    </element>
+
+    <element name="TeamEntityInfo" parent="object">
+      <member type="string" name="name" />
+      <member type="int32" name="instanceId" />
+    </element>
+    
+    <element name="TeamInfo" parent="object">
+      <member type="int32" name="teamId" />
+      <member type="int32" name="leaderInsId" />
+      <member type="vector" name="teamEntityInfos" element="TeamEntityInfo" />
+    </element>
+
+    <element name="RoomPlayerInfo" parent="object">
+      <member type="string" name="name" />
+      <member type="uint32" name="userId" />
+      <member type="uint64" name="insId" />
+      <member type="uint8" name="state" />
+      <member type="uint8" name="pos" />
+    </element>
+    
+    <element name="RoomInfo" parent="object">
+      <member type="uint32" name="roomId" />
+      <member type="uint32" name="masterUserId" />
+      <member type="string" name="password" />
+      <member type="string" name="name" />
+      <member type="uint32" name="maxCount" />
+      <member type="vector" name="roomPlayerInfos" element="RoomPlayerInfo" />
+    </element>
+
+    <element name="GameEntityInfo" parent="object">
+      <member type="uint32" name="userId" />
+      <member type="vector" name="cards" element="uint8" />
+      <member type="uint32" name="userGold" comment="使用的钱" />
+    </element>
+
+    <element name="GameGoldenFlowerInfo" parent="object">
+      <member type="uint32" name="insId" />
+      <member type="uint32" name="roomId" />
+      <member type="uint32" name="bankerUserId" />
+      <member type="uint32" name="curSpeakUserId" />
+      <member type="uint32" name="speakTime" />
+      <member type="uint32" name="curUseGold" />
+      <member type="uint32" name="curMaxUseGold" />
+      <member type="uint32" name="round" />
+      <member type="vector" name="gameEntInfos" element="GameEntityInfo" />
+    </element>
+
+    <element name="FriendInfo" parent="object">
+      <member type="uint32" name="userId" />
+      <member type="string" name="name" />
+      <member type="uint32" name="groupId" />
+      <member type="uint32" name="charId" />
+      <member type="uint8" name="state" comment="0.离线1.在线" />
+    </element>
+
+    <element name="ProductInfo" parent="object">
+      <member type="uint32" name="productInsId" comment="" />
+      <member type="uint32" name="productId" comment="" />
+      <member type="uint32" name="sellUserId" comment="" />
+      <member type="uint32" name="buyUserId" comment="" />
+      <member type="uint32" name="shelvesTime" comment="" />
+      <member type="uint32" name="unShelvesTime" comment="" />
+    </element>
+
+    <element name="MailInfo" parent="object">
+      <member type="string" name="fromUserName" />
+      <member type="string" name="title" />
+      <member type="string" name="content" />
+      <member type="string" name="datastr" />
+      <member type="uint8" name="isDown" comment="" />
+      <member type="uint8" name="isRead" comment="" />
+    </element>
+    
+  </class>
+
+  <protocol>
+
+    <element id="ID_NetFirst" name="NetFirst" >
+      <member type="Stream" name="sbytes" />
+    </element>
+    
+    <element id="ID_NetSessionEnterNotify" name="NetSessionEnterNotify" >
+      <member type="string" name="host" />
+    </element>
+
+    <element id="ID_NetSessionLeaveNotify" name="NetSessionLeaveNotify" >
+      <member type="int32" name="msgCode" />
+      <member type="string" name="msg" />
+    </element>
+
+    <element id="ID_NetPingNotify" name="NetPingNotify" >
+      <member type="uint32" name="time" />
+    </element>
+
+    <element id="ID_NetPingGateNotify" name="NetPingGateNotify" >
+      <member type="uint32" name="time" />
+    </element>
+    
+    <element id="ID_NetLoginReq" name="NetLoginReq" >
+		  <member type="string" name="user" />
+      <member type="string" name="password" />
+	  </element>
+
+    <element id="ID_NetLoginRes" name="NetLoginRes" >
+      <member type="int32" name="result" comment="0.成功 1.帐号或密码错误 2.此号在异地登陆, 被强制踢下线 3.重复登陆" />
+      <member type="int64" name="guid" />
+      <member type="DBAccountInfo" name="accInfo" />
+      <member type="vector" name="roleInfos" element="DBRoleInfo" />
+    </element>
+
+    <element id="ID_NetPlayerSaveNotify" name="NetPlayerSaveNotify" >
+      <member type="int32" name="accountId" />
+      <member type="vector" name="roleInfos" element="DBRoleInfo"  />
+    </element>
+    
+    <element id="ID_NetCreateRoleReq" name="NetCreateRoleReq" >
+      <member type="uint32" name="accId" />
+      <member type="string" name="name" />
+      <member type="uint32" name="charId" />
+    </element>
+
+    <element id="ID_NetCreateRoleRes" name="NetCreateRoleRes" >
+      <member type="uint8" name="result" comment="0.1" />
+      <member type="uint32" name="accId" />
+      <member type="DBRoleInfo" name="roleInfo" />
+    </element>
+
+    <element id="ID_NetSelectRoleReq" name="NetSelectRoleReq" >
+      <member type="uint32" name="accId" />
+      <member type="uint32" name="userId" />
+    </element>
+
+    <element id="ID_NetSelectRoleRes" name="NetSelectRoleRes" >
+      <member type="uint8" name="result" comment="0.1" />
+      <member type="uint32" name="accId" />
+      <member type="DBRoleInfo" name="roleInfo" />
+    </element>
+    
+    <element id="ID_NetChangeNameReq" name="NetChangeNameReq" >
+      <member type="string" name="newName" />
+    </element>
+
+    <element id="ID_NetChangeNameRes" name="NetChangeNameRes" >
+      <member type="uint8" name="result" comment="0.1" />
+      <member type="string" name="newName" />
+    </element>
+
+    <element id="ID_NetGmMsg" name="NetGmMsg" >
+      <member type="string" name="name" />
+      <member type="vector" name="gmParams" element="string" />
+    </element>
+
+    <element id="ID_NetQueryRoleReq" name="NetQueryRoleReq" >
+      <member type="int32" name="accountId" />
+      <member type="string" name="user" />
+      <member type="int8" name="roleCount" />
+    </element>
+
+    <element id="ID_NetQueryRoleRes" name="NetQueryRoleRes" >
+      <member type="int32" name="accountId" />
+      <member type="vector" name="roleInfos" element="DBRoleInfo"  />
+    </element>
+
+    <element id="ID_NetPropertyReq" name="NetPropertyReq" >
+      <member type="int64" name="guid" />
+    </element>
+    
+    <element id="ID_NetPropertyRes" name="NetPropertyRes" >
+      <member type="int64" name="guid" />
+      <member type="Stream" name="property" />
+    </element>
+
+    <element id="ID_NetEntityPropertyNotify" name="NetEntityPropertyNotify" >
+      <member type="int64" name="guid" />
+      <member type="Stream" name="property" />
+    </element>
+
+    <element id="ID_NetEntityEnterMapNotify" name="NetEntityEnterMapNotify" >
+      <member type="string" name="name" />
+      <member type="int64" name="guid" />
+      <member type="int32" name="mapInsId" />
+      <member type="int32" name="mapId" />
+    </element>
+    
+    <element id="ID_NetEntityLeaveMapNotify" name="NetEntityLeaveMapNotify" >
+      <member type="int64" name="guid" />
+      <member type="int32" name="mapInsId" />
+      <member type="int32" name="mapId" />
+    </element>
+
+    <element id="ID_NetPlayerEnterViewNotify" name="NetPlayerEnterViewNotify" >
+      <member type="string" name="name" />
+      <member type="int64" name="guid" />
+      <member type="int32" name="entityType" />
+      <member type="int32" name="mapId" />
+      <member type="int32" name="charId" comment="角色ID" />
+      <member type="Point" name="pos" />
+      <member type="float32" name="speed" />
+      <member type="int32" name="status" />
+      <member type="int32" name="dir" />
+    </element>
+
+    <element id="ID_NetPlayerLeaveViewNotify" name="NetPlayerLeaveViewNotify" >
+      <member type="int64" name="guid" />
+      <member type="int32" name="mapId" />
+    </element>
+
+    <element id="ID_NetNpcEnterViewNotify" name="NetNpcEnterViewNotify" >
+      <member type="string" name="name" />
+      <member type="int64" name="guid" />
+      <member type="int32" name="entityType" />
+      <member type="int32" name="mapId" />
+      <member type="int32" name="npcId" comment="npcId" />
+      <member type="Point" name="pos" />
+      <member type="float32" name="speed" />
+      <member type="int32" name="status" />
+      <member type="int32" name="dir" />
+    </element>
+
+    <element id="ID_NetNpcLeaveViewNotify" name="NetNpcLeaveViewNotify" >
+      <member type="int64" name="guid" />
+      <member type="int32" name="mapId" />
+    </element>
+
+    <element id="ID_NetEntityMoveNotify" name="NetEntityMoveNotify" >
+      <member type="int64" name="guid" />
+      <member type="int8" name="startDir" />
+      <member type="int32" name="x" />
+      <member type="int32" name="y" />
+    </element>
+    
+    <element id="ID_NetEntityMoveToNotify" name="NetEntityMoveToNotify" >
+      <member type="int64" name="guid" />
+      <member type="int32" name="x" />
+      <member type="int32" name="y" />
+    </element>
+
+    <element id="ID_NetEntityAttackNotify" name="NetEntityAttackNotify" >
+      <member type="int64" name="guid" />
+      <member type="int8" name="index" />
+      <member type="int64" name="tarGuid" />
+      <member type="int8" name="dirPos" />
+    </element>
+    
+    <element id="ID_NetEntityFollowNotify" name="NetEntityFollowNotify" >
+      <member type="int64" name="tarGuid" />
+    </element>
+
+    <element id="ID_NetEntityCancelFollowNotify" name="NetEntityCancelFollowNotify" >
+      <member type="int64" name="tarGuid" />
+    </element>
+    
+    <element id="ID_NetChatMsgNotify" name="NetChatMsgNotify" >
+      <member type="string" name="from" />
+      <member type="string" name="to" />
+      <member type="int8" name="channelType" />
+      <member type="string" name="chatMsg" />
+      <member type="Stream" name="chatData" />
+    </element>
+
+    <element id="ID_NetResponseMsgNotify" name="NetResponseMsgNotify" >
+      <member type="int32" name="msgId" />
+      <member type="vector" name="msgParams" element="string" />
+    </element>
+
+    <element id="ID_NetCreateTeamReq" name="NetCreateTeamReq" >
+    </element>
+
+    <element id="ID_NetCreateTeamRes" name="NetCreateTeamRes" >
+      <member type="TeamInfo" name="teamInfo" />
+    </element>
+
+    
+    <element id="ID_NetOrganizeTeamReq" name="NetOrganizeTeamReq" >
+      <member type="string" name="name" />
+    </element>
+
+    <element id="ID_NetOrganizeTeamRes" name="NetOrganizeTeamRes" >
+      <member type="string" name="name" />
+      <member type="int8" name="isJoin" comment="0.邀请 1.申请" />
+    </element>
+
+    <element id="ID_NetAgreeTeamReq" name="NetAgreeTeamReq" >
+      <member type="string" name="name" />
+      <member type="int8" name="isJoin" comment="0.邀请 1.申请" />
+    </element>
+
+
+    <element id="ID_NetTeamInfoRes" name="NetTeamInfoRes" >
+      <member type="TeamInfo" name="teamInfo" />
+    </element>
+
+    <element id="ID_NetTeamListReq" name="NetTeamListReq" >
+    </element>
+    
+    <element id="ID_NetTeamListRes" name="NetTeamListRes" >
+      <member type="vector" name="teamInfos" element="TeamInfo" />
+    </element>
+
+    <element id="ID_NetCreateRoomReq" name="NetCreateRoomReq" >
+      <member type="string" name="name" />
+    </element>
+
+    <element id="ID_NetCreateRoomRes" name="NetCreateRoomRes" >
+      <member type="RoomInfo" name="roomInfo" />
+    </element>
+
+    <element id="ID_NetEnterRoomReq" name="NetEnterRoomReq" >
+      <member type="uint32" name="roomId" />
+      <member type="string" name="password" />
+    </element>
+
+    <element id="ID_NetEnterRoomRes" name="NetEnterRoomRes" >
+      <member type="RoomInfo" name="roomInfo" />
+    </element>
+
+    <element id="ID_NetEnterRoomNotify" name="NetEnterRoomNotify" >
+      <member type="uint32" name="roomId" />
+      <member type="RoomPlayerInfo" name="roomPlayerInfo" />
+    </element>
+
+    <element id="ID_NetLeaveRoomReq" name="NetLeaveRoomReq" >
+      <member type="uint32" name="roomId" />
+    </element>
+
+    <element id="ID_NetLeaveRoomRes" name="NetLeaveRoomRes" >
+      <member type="uint32" name="roomId" />
+      <member type="uint32" name="userId" />
+    </element>
+
+    <element id="ID_NetChangeRoomMasterReq" name="NetChangeRoomMasterReq" >
+      <member type="uint32" name="roomId" />
+      <member type="uint32" name="userId" />
+    </element>
+
+    <element id="ID_NetChangeRoomMasterRes" name="NetChangeRoomMasterRes" >
+      <member type="uint32" name="roomId" />
+      <member type="uint32" name="masterUserId" />
+    </element>
+
+    <element id="ID_NetRoomListReq" name="NetRoomListReq" >
+      <member type="uint32" name="start" />
+      <member type="uint32" name="count" />
+    </element>
+
+    <element id="ID_NetRoomListRes" name="NetRoomListRes" >
+      <member type="vector" name="roomInfoInfos" element="RoomInfo" />
+    </element>
+
+    <element id="ID_NetRoomReadyReq" name="NetRoomReadyReq" >
+      <member type="uint8" name="isReady" comment="0.取消准备1.准备" />
+    </element>
+
+    <element id="ID_NetRoomReadyRes" name="NetRoomReadyRes" >
+      <member type="uint32" name="userId" />
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+      <member type="uint8" name="isReady" comment="0.取消准备1.准备" />
+    </element>
+
+    <element id="ID_NetRoomStartGameReq" name="NetRoomStartGameReq" >
+    </element>
+
+    <element id="ID_NetRoomStartGameRes" name="NetRoomStartGameRes" >
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+    </element>
+
+    <element id="ID_NetRoomInfoNotify" name="NetRoomInfoNotify" >
+      <member type="RoomInfo" name="roomInfo" />
+    </element>
+    
+    <element id="ID_NetGameStartNotify" name="NetGameStartNotify" >
+      <member type="GameGoldenFlowerInfo" name="info" />
+    </element>
+
+    <element id="ID_NetGameCloseNotify" name="NetGameCloseNotify" >
+      <member type="uint32" name="winUserId" comment="" />
+      <member type="uint32" name="winGold" comment="" />
+    </element>
+    
+    <element id="ID_NetGameInfoNotify" name="NetGameInfoNotify" >
+      <member type="GameGoldenFlowerInfo" name="info" />
+    </element>
+
+    <element id="ID_NetGameOperateSeeReq" name="NetGameOperateSeeReq" >
+    </element>
+    
+    <element id="ID_NetGameOperateSeeRes" name="NetGameOperateSeeRes" >
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+      <member type="vector" name="cards" element="uint8" />
+    </element>
+
+    <element id="ID_NetGameOperateGiveupReq" name="NetGameOperateGiveupReq" >
+    </element>
+
+    <element id="ID_NetGameOperateGiveupRes" name="NetGameOperateGiveupRes" >
+      <member type="uint32" name="userId" comment="当前Id" />
+    </element>
+    
+    <element id="ID_NetGameOperateChipinReq" name="NetGameOperateChipinReq" >
+      <member type="uint32" name="gold" comment="金币" />
+    </element>
+
+    <element id="ID_NetGameOperateChipinRes" name="NetGameOperateChipinRes" >
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+      <member type="uint32" name="userId" comment="当前Id" />
+      <member type="uint32" name="gold" comment="使用金币" />
+      <member type="uint8" name="state" comment="状态" />
+      <member type="uint32" name="nextSpeakUserId" comment="下个说话的玩家" />
+      <member type="uint32" name="speakTime" comment="说话时间" />
+      
+    </element>
+
+    <element id="ID_NetGameOperateCallReq" name="NetGameOperateCallReq" >
+    </element>
+
+    <element id="ID_NetGameOperateCallRes" name="NetGameOperateCallRes" >
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+      <member type="uint32" name="userId" comment="当前Id" />
+      <member type="uint32" name="gold" comment="使用金币" />
+      <member type="uint8" name="state" comment="状态" />
+      <member type="uint32" name="nextSpeakUserId" comment="下个说话的玩家" />
+      <member type="uint32" name="speakTime" comment="说话时间" />
+    </element>
+    
+    <element id="ID_NetGameOperateCompareReq" name="NetGameOperateCompareReq" >
+      <member type="uint32" name="tarUserId" comment="" />
+    </element>
+
+    <element id="ID_NetGameOperateCompareRes" name="NetGameOperateCompareRes" >
+      <member type="uint8" name="result" comment="0.失败1.成功" />
+      <member type="uint32" name="userId" comment="" />
+      <member type="vector" name="cards" element="uint8" />
+      <member type="uint32" name="gold" comment="使用金币" />
+      <member type="uint8" name="state" comment="状态" />
+      
+      <member type="uint32" name="tarUserId" comment="" />
+      <member type="vector" name="tarCards" element="uint8" />
+      <member type="uint8" name="tarState" comment="状态" />
+
+      <member type="uint32" name="nextSpeakUserId" comment="下个说话的玩家" />
+      <member type="uint32" name="speakTime" comment="说话时间" />
+    </element>
+
+    <element id="ID_NetAddFriendReq" name="NetAddFriendReq" >
+      <member type="string" name="tarName" comment="加谁" />
+    </element>
+
+    <element id="ID_NetAddFriendRes" name="NetAddFriendRes" >
+      <member type="uint8" name="result" comment="0.拒绝1.同意" />
+      <member type="string" name="tarName" comment="谁加" />
+    </element>
+
+    <element id="ID_NetAddFriendNotify" name="NetAddFriendNotify" >
+      <member type="FriendInfo" name="friendInfo" comment="" />
+    </element>
+
+    <element id="ID_NetFriendListReq" name="NetFriendListReq" >
+    </element>
+    
+    <element id="ID_NetFriendListRes" name="NetFriendListRes" >
+      <member type="vector" name="gruopIds" element="uint32"/>
+      <member type="vector" name="gruopNames" element="string"/>
+      <member type="vector" name="friendInfos" element="FriendInfo"/>
+    </element>
+
+    <element id="ID_NetSellProductReq" name="NetSellProductReq" >
+      <member type="uint32" name="productId" comment="" />
+    </element>
+
+    <element id="ID_NetSellProductRes" name="NetSellProductRes" >
+      <member type="uint32" name="result" comment="" />
+      <member type="ProductInfo" name="productInfo" comment="" />
+    </element>
+
+    <element id="ID_NetProductListReq" name="NetProductListReq" >
+      <member type="uint32" name="index" comment="" />
+      <member type="uint32" name="count" comment="" />
+    </element>
+
+    <element id="ID_NetProductListRes" name="NetProductListRes" >
+      <member type="vector" name="productInfos" element="ProductInfo"/>
+    </element>
+
+    <element id="ID_NetMailListNotify" name="NetMailListNotify" >
+      <member type="vector" name="mailInfos" element="MailInfo"/>
+    </element>
+    
+    <element id="ID_NetEnd" name="NetEnd" >
+    </element>
+
+  </protocol>
+  
+</item>

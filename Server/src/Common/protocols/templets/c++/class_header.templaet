@@ -1,0 +1,20 @@
+class #CLASS_NAME# : public Packet {
+public:
+	#CLASS_NAME#():
+	Packet(#PACKET_ID#) {
+#CONSTRUCTION#
+	}
+
+	bool OnSerialize(BinaryStream& bytes) {
+#ON_PACK#
+		return true;
+	}
+
+	bool OnDeserialize(BinaryStream& bytes) {
+#ON_UNPACK#
+		return true;
+	}
+public:
+#MEMBER#
+};
+

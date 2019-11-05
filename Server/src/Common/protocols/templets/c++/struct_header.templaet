@@ -1,0 +1,19 @@
+class #CLASS_NAME# : public Object {
+public:
+	#CLASS_NAME#() {
+#CONSTRUCTION#
+	}
+
+	bool operator >> (BinaryStream& bytes) {
+#ON_PACK#
+		return true;
+	}
+
+	bool operator << (BinaryStream& bytes) {
+#ON_UNPACK#
+		return true;
+	}
+public:
+#MEMBER#
+};
+

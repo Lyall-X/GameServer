@@ -1,0 +1,19 @@
+export class #CLASS_NAME# extends IPacket
+{
+	constructor() {
+		super(PACKET_ID_ENUM.#PACKET_ID#)
+#CONSTRUCTION#
+	}
+
+	protected OnPackHeader(stream: ByteStream): boolean	{
+#ON_PACK#
+		return true;
+	}
+
+	protected OnUnPackHeader(stream: ByteStream): boolean	{
+#ON_UNPACK#
+		return true;
+	}
+
+#MEMBER#
+}

@@ -1,0 +1,9 @@
+int #NAME#_TEMP = 0;
+bytes.Read(ref #NAME#_TEMP);
+for (int i = 0; i < #NAME#_TEMP; ++i)
+{
+	#ELEMENT# info_#NAME#;
+	#DEFAULT#
+	#READ#
+	#NAME#.Add(info_#NAME#);
+}

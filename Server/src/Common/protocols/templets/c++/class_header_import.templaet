@@ -1,0 +1,9 @@
+#pragma once
+
+enum PACKET_ID_ENUM {
+#PACKET_ID_ENUM#
+};
+
+#PROTOCOLS#
+
+#REGISTER#

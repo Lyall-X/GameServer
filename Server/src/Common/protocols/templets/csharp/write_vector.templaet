@@ -1,0 +1,6 @@
+int #NAME#_TEMP = #NAME#.Count;
+bytes.Write(#NAME#_TEMP);
+for (int i = 0; i < #NAME#_TEMP; ++i)
+{
+	bytes.Write(#NAME#[i]);
+}

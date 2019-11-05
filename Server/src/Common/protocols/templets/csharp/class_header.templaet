@@ -1,0 +1,21 @@
+public class #CLASS_NAME# : Packet
+{
+	public #CLASS_NAME#():base((int)PACKET_ID_ENUM.#PACKET_ID#)
+	{
+#CONSTRUCTION#
+	}
+
+	protected override bool OnSerialize(BinaryStream bytes)
+	{
+#ON_PACK#
+		return true;
+	}
+
+	protected override bool OnDeserialize(BinaryStream bytes)
+	{
+#ON_UNPACK#
+		return true;
+	}
+
+#MEMBER#
+}

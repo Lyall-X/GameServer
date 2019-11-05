@@ -1,0 +1,20 @@
+export class #CLASS_NAME# extends IStream
+{
+#MEMBER#
+
+	constructor() {
+		super();
+#CONSTRUCTION#
+	}
+
+	public serialize(stream: ByteStream):boolean {
+#ON_PACK#
+		return true;
+	}
+
+	public deSerialize(stream: ByteStream):boolean {
+#ON_UNPACK#
+		return true;
+	}
+
+}

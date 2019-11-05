@@ -1,0 +1,21 @@
+public class #CLASS_NAME# : Header
+{
+	public #CLASS_NAME#()
+	{
+#CONSTRUCTION#
+	}
+
+	protected override bool OnSerialize(BinaryStream bytes)
+	{
+#ON_PACK#
+		return true;
+	}
+
+	protected override bool OnDeserialize(BinaryStream bytes)
+	{
+#ON_UNPACK#
+		return true;
+	}
+
+#MEMBER#
+}
