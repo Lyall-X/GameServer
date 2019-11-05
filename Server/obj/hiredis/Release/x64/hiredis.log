@@ -1,0 +1,56 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  async.c
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\config.h(21): warning C4005: “EINPROGRESS”: 宏重定义
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\errno.h(97): note: 参见“EINPROGRESS”的前一个定义
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\async.c(67): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\async.c(82): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\async.c(83): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  hiredis.c
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\config.h(21): warning C4005: “EINPROGRESS”: 宏重定义
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\errno.h(97): note: 参见“EINPROGRESS”的前一个定义
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(122): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(265): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(325): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(404): warning C4267: “=”: 从“size_t”转换到“unsigned long”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(405): warning C4244: “=”: 从“__int64”转换到“long”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(460): warning C4244: “=”: 从“__int64”转换到“long”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(655): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(685): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(716): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(821): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(840): warning C4477: “sprintf”: 格式字符串“%lu”需要类型“unsigned long”的参数，但可变参数 1 拥有了类型“size_t”
+  c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(840): note: 请考虑在格式字符串中使用“%zu”
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(845): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(909): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(920): warning C4477: “sprintf”: 格式字符串“%u”需要类型“unsigned int”的参数，但可变参数 1 拥有了类型“size_t”
+  c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(920): note: 请考虑在格式字符串中使用“%zu”
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(922): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\hiredis.c(1101): warning C4267: “函数”: 从“size_t”转换到“int”，可能丢失数据
+  net.c
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\config.h(21): warning C4005: “EINPROGRESS”: 宏重定义
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\errno.h(97): note: 参见“EINPROGRESS”的前一个定义
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\net.c(80): warning C4244: “=”: 从“SOCKET”转换到“int”，可能丢失数据
+  sds.c
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\config.h(21): warning C4005: “EINPROGRESS”: 宏重定义
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\errno.h(97): note: 参见“EINPROGRESS”的前一个定义
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(54): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(84): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(105): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(123): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(124): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(136): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(137): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(158): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(159): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(215): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(216): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(226): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(230): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(238): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(246): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(247): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(252): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(258): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\hiredis\sds.c(271): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+  hiredis.vcxproj -> C:\Users\liuyue.barry\Desktop\ogn\build\hiredis\../../lib\hiredis64.lib

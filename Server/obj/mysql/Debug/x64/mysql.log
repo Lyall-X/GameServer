@@ -1,0 +1,15 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
+  DBAngent.cpp
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbangent.cpp(52): warning C4267: “=”: 从“size_t”转换到“uint32”，可能丢失数据
+  DBConnector.cpp
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbconnector.cpp(265): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbconnector.cpp(285): warning C4018: “<”: 有符号/无符号不匹配
+  DBEvent.cpp
+  DBProxy.cpp
+  DBRecord.cpp
+  DBRequest.cpp
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbrequest.cpp(48): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbrequest.cpp(69): warning C4018: “<”: 有符号/无符号不匹配
+c:\users\liuyue.barry\desktop\ogn\src\shared\modules\libmysql\src\dbrequest.cpp(281): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码...
+  mysql.vcxproj -> C:\Users\liuyue.barry\Desktop\ogn\build\mysql\../../lib/mysql64_d.lib

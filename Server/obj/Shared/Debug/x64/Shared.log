@@ -1,0 +1,98 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  json_writer.cpp
+g:\server\ogn\src\shared\core\json\json_writer.cpp(139): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+  json_value.cpp
+g:\server\ogn\src\shared\core\json\json_value.cpp(797): warning C4244: “return”: 从“double”转换到“float”，可能丢失数据
+  json_reader.cpp
+  Variant.cpp
+  TimerDispatcher.cpp
+  ThreaderPool.cpp
+  Threader.cpp
+  Status.cpp
+  SocketListener.cpp
+  SocketEvent.cpp
+  SocketClient.cpp
+  SocketAngent.cpp
+  Socket.cpp
+  Shared.cpp
+g:\server\ogn\src\shared\core\core\shared.cpp(231): warning C4244: “return”: 从“double”转换到“float32”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(499): warning C4244: “=”: 从“intptr_t”转换到“long”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(591): warning C4267: “初始化”: 从“size_t”转换到“uint32”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(593): warning C4018: “<”: 有符号/无符号不匹配
+g:\server\ogn\src\shared\core\core\shared.cpp(606): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(610): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(614): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+g:\server\ogn\src\shared\core\core\shared.cpp(618): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  RTTI.cpp
+  Reference.cpp
+  RedisProxy.cpp
+  PacketManager.cpp
+  Packet.cpp
+  ObjectManager.cpp
+  正在生成代码...
+  正在编译...
+  Object.cpp
+  Network.cpp
+  Mutex.cpp
+  Vector4.cpp
+  Vector3.cpp
+  Vector2.cpp
+  Rectangle.cpp
+  Point2.cpp
+  MathUtils.cpp
+  BinaryUtils.cpp
+  log_win_outputer.cpp
+  log_system.cpp
+  log_outputer.cpp
+  log_file_outputer.cpp
+  log_console_outpter.cpp
+  log.cpp
+  List.cpp
+  IOCP.cpp
+g:\server\ogn\src\shared\core\core\iocp.cpp(46): warning C4312: “类型强制转换”: 从“uint32”转换到更大的“HANDLE”
+g:\server\ogn\src\shared\core\core\iocp.cpp(276): warning C4312: “类型强制转换”: 从“int32”转换到更大的“HANDLE”
+g:\server\ogn\src\shared\core\core\iocp.cpp(345): warning C4018: “>”: 有符号/无符号不匹配
+g:\server\ogn\src\shared\core\core\iocp.cpp(377): warning C4312: “类型强制转换”: 从“int32”转换到更大的“HANDLE”
+  EventRegister.cpp
+  EventListener.cpp
+  正在生成代码...
+  正在编译...
+  EventDispatcher.cpp
+  Event.cpp
+  dump.cpp
+  Dictionary.cpp
+  DateTime.cpp
+g:\server\ogn\src\shared\core\core\datetime.cpp(169): warning C4244: “return”: 从“time_t”转换到“uint32”，可能丢失数据
+  conio.cpp
+  Compression.cpp
+g:\server\ogn\src\shared\core\core\compression.cpp(229): warning C4018: “<”: 有符号/无符号不匹配
+  CmdDispatcher.cpp
+  CircularBuffer.cpp
+g:\server\ogn\src\shared\core\core\circularbuffer.cpp(107): warning C4018: “<”: 有符号/无符号不匹配
+g:\server\ogn\src\shared\core\core\circularbuffer.cpp(175): warning C4018: “<”: 有符号/无符号不匹配
+  BlockStream.cpp
+  Bit.cpp
+  BinaryStream.cpp
+  Astar.cpp
+  AES.cpp
+  正在生成代码...
+cl : 命令行 warning D9035: “Gm”选项已否决，并将在将来的版本中移除
+  zutil.c
+  uncompr.c
+  trees.c
+  inftrees.c
+  inflate.c
+  inffast.c
+  infback.c
+  gzwrite.c
+  gzread.c
+  gzlib.c
+  gzclose.c
+  deflate.c
+  crc32.c
+  compress.c
+  adler32.c
+  正在生成代码...
+  Shared.vcxproj -> G:\server\ogn\build\Shared\../../lib\Shared64_d.lib

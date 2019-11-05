@@ -1,0 +1,55 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(376,5): warning MSB8004: Intermediate 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Intermediate 目录。
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output 目录未以斜杠结尾。  此生成实例将添加斜杠，因为必须有这个斜杠才能正确计算 Output 目录。
+  class.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  class_info.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  class_registry.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  class_rep.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  create_class.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  error.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  exception_handler.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  function.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  inheritance.cpp
+  Unknown compiler version - please run the configure tests and report the results
+c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\utility(174): warning C4267: “初始化”: 从“size_t”转换到“_Ty2”，可能丢失数据
+          with
+          [
+              _Ty2=int
+          ]
+  c:\users\liuyue.barry\desktop\ogn\src\shared\modules\luabind\src\inheritance.cpp(97): note: 参见对正在编译的函数 模板 实例化“std::pair<ptrdiff_t,int>::pair<ptrdiff_t&,size_t&,0>(_Other1,_Other2) noexcept”的引用
+          with
+          [
+              _Other1=ptrdiff_t &,
+              _Other2=size_t &
+          ]
+  c:\users\liuyue.barry\desktop\ogn\src\shared\modules\luabind\src\inheritance.cpp(95): note: 参见对正在编译的函数 模板 实例化“std::pair<ptrdiff_t,int>::pair<ptrdiff_t&,size_t&,0>(_Other1,_Other2) noexcept”的引用
+          with
+          [
+              _Other1=ptrdiff_t &,
+              _Other2=size_t &
+          ]
+  link_compatibility.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  object_rep.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  open.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  pcall.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  scope.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  stack_content_by_name.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  weak_ref.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  wrapper_base.cpp
+  Unknown compiler version - please run the configure tests and report the results
+  正在生成代码...
+  luabind.vcxproj -> C:\Users\liuyue.barry\Desktop\ogn\build\luabind\../../lib\luabind64_d.lib
